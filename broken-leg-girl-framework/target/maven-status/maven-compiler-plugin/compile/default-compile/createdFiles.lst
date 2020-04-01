@@ -3,7 +3,9 @@ com\blg\framework\jpa\support\CommentWriter.class
 com\blg\framework\data\copier\FastCopierConverter.class
 com\blg\framework\data\copier\FastCopier$BeanCopierKey.class
 com\blg\framework\data\copier\Beans$Copier.class
+com\blg\framework\Main.class
 com\blg\framework\jpa\model\EntityModel.class
+com\blg\framework\config\Constants.class
 com\blg\framework\data\copier\Beans$Copier$1.class
 com\blg\framework\data\copier\FastCopier$Generator.class
 com\blg\framework\data\copier\FastCopier.class
@@ -15,3 +17,4 @@ com\blg\framework\config\WebConfig.class
 com\blg\framework\data\copier\Beans.class
 com\blg\framework\jpa\model\Model.class
 com\blg\framework\jpa\support\CommentWriter$1.class
+com\blg\framework\config\MainConfig.class
