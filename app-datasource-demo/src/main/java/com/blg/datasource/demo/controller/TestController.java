@@ -25,4 +25,8 @@ public class TestController {
         return testService.testSave();
     }
 
+    @GetMapping("testM")
+    public String testMybatis() {
+        return testService.testMybatis();
+    }
 }
