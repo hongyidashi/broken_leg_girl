@@ -2,6 +2,7 @@
 
 #### 介绍
   &emsp;&emsp;断腿少女计划2（开发中~）
+  &emsp;&emsp;2020/4/1 整合springdata--jpa-hibernate
 
 #### 软件架构
   &emsp;&emsp;打算使用springboot + springcloud + hibernate + springMVC + mybatis搭建
