@@ -1,10 +1,13 @@
-package com.blg.demo.jpa.controller;
+package com.blg.datasource.demo.controller;
 
-import com.blg.demo.jpa.dao.repository.GirlRepository;
-import com.blg.demo.jpa.model.$Girl;
+import com.blg.datasource.demo.model.$Girl;
+import com.blg.datasource.demo.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 /**
  * @Auther: panhongtong
@@ -15,14 +18,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @Autowired
-    private GirlRepository girlRepository;
+    private TestService testService;
 
     @GetMapping("testH")
     public String test() {
-        $Girl girl = new $Girl();
-        girl.setName("断腿少女");
-        girl.setAge(3);
-        girlRepository.save(girl);
-        return String.valueOf(girlRepository.findAll());
+        return testService.testSave();
     }
+
 }

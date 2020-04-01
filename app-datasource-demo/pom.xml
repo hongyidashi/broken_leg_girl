@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>demo-jpa-hibernate</artifactId>
+    <artifactId>app-datasource-demo</artifactId>
 
     <dependencies>
         <dependency>

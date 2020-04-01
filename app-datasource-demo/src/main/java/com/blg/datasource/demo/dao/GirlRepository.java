@@ -1,9 +1,7 @@
-package com.blg.demo.jpa.dao.repository;
+package com.blg.datasource.demo.dao;
 
-import com.blg.demo.jpa.model.$Girl;
+import com.blg.datasource.demo.model.$Girl;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 
 import java.util.Optional;
 

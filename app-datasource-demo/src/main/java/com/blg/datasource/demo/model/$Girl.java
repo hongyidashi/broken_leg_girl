@@ -1,4 +1,4 @@
-package com.blg.demo.jpa.model;
+package com.blg.datasource.demo.model;
 
 import com.blg.framework.jpa.model.EntityModel;
 import com.blg.framework.jpa.support.Comment;
