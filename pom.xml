@@ -11,7 +11,7 @@
     <modules>
         <module>broken-leg-girl-framework</module>
         <module>blg-demo</module>
-        <module>demo-jpa-hibernate</module>
+        <module>app-datasource-demo</module>
     </modules>
 
     <properties>
