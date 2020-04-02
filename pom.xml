@@ -12,6 +12,7 @@
         <module>broken-leg-girl-framework</module>
         <module>blg-demo</module>
         <module>app-datasource-demo</module>
+        <module>app-api</module>
     </modules>
 
     <properties>

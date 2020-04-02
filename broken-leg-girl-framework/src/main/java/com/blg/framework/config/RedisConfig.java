@@ -4,6 +4,8 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.parser.ParserConfig;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.blg.framework.data.SerializableWrapper;
+import com.blg.framework.lock.LockAdvice;
+import com.blg.framework.lock.RedisLockOp;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -56,4 +58,17 @@ public class RedisConfig {
         template.afterPropertiesSet();
         return template;
     }
+
+    @Bean
+    public RedisLockOp redisLockOp(RedisTemplate redisTemplate){
+        RedisLockOp redisLockOp = new RedisLockOp();
+        redisLockOp.setRedisTemplate(redisTemplate);
+        return redisLockOp;
+    }
+
+    @Bean
+    public LockAdvice lockAdvice(){
+        return new LockAdvice();
+    }
+
 }
