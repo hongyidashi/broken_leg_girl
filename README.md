@@ -3,11 +3,16 @@
 #### 介绍
   &emsp;&emsp;断腿少女计划2（开发中~）  
   &emsp;&emsp;2020/4/1 整合springdata--jpa-hibernate
-  &emsp;&emsp;2020/4/2 整合mybaits失败，取消整合
+  &emsp;&emsp;2020/4/2 整合mybaits失败，取消整合  
+  &emsp;&emsp;2020/4/2 整合Redis
 
 #### 软件架构
   &emsp;&emsp;打算使用springboot + springcloud + hibernate + springMVC + mybatis搭建
 
+#### 开发进度
+  &emsp;&emsp;<font color=green>2020/4/1 整合springdata--jpa-hibernate</font>  
+  &emsp;&emsp;<font color=red>2020/4/2 整合mybaits——失败，取消整合</font>  
+  &emsp;&emsp;<font color=green>2020/4/2 整合Redis</font>  
 
 #### 安装教程
   &emsp;&emsp;暂无
