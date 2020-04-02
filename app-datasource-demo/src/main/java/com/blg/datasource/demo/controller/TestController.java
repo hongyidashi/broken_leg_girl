@@ -1,13 +1,9 @@
 package com.blg.datasource.demo.controller;
 
-import com.blg.datasource.demo.model.$Girl;
 import com.blg.datasource.demo.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
 
 /**
  * @Auther: panhongtong
@@ -25,8 +21,13 @@ public class TestController {
         return testService.testSave();
     }
 
-    @GetMapping("testM")
-    public String testMybatis() {
-        return testService.testMybatis();
+    @GetMapping("testJ")
+    public String testJ() {
+        return testService.jpaQueue();
+    }
+
+    @GetMapping(value = "testC")
+    public String testC() {
+        return "中文乱码？？";
     }
 }
