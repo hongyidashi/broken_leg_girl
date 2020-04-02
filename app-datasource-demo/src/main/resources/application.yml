@@ -15,3 +15,8 @@ spring:
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
     properties:
       hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+  redis:
+    host: localhost
+    port: 30130
+    pool:
+      database: 0

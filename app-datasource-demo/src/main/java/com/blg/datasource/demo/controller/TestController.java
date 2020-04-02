@@ -30,4 +30,9 @@ public class TestController {
     public String testC() {
         return "中文乱码？？";
     }
+
+    @GetMapping(value = "testR")
+    public String testr() {
+        return testService.testRedis();
+    }
 }
