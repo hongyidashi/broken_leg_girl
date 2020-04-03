@@ -20,6 +20,16 @@
         </dependency>
         <!-- 分页插件结束 -->
         <!-- starter开始 -->
+        <!-- 链路追踪sleuth -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-sleuth</artifactId>
+        </dependency>
+        <!-- 链路追踪zipkin -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-sleuth-zipkin</artifactId>
+        </dependency>
         <!--   nacos config     -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
