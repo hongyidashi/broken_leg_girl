@@ -1,9 +1,11 @@
 package com.blg.blgdemo.controller;
 
+import com.blg.api.annotation.ExtApiToken;
 import com.blg.blgdemo.service.TestService;
 import com.blg.blgdemo.vo.reqvo.TestReqVO;
 import com.blg.framework.utils.Webs;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,9 +28,17 @@ public class TestController {
         return Webs.getRequest().getRequestURI() + "------" + Webs.getRequest().getMethod() + "中文乱码咋办啊";
     }
 
+    @Autowired
+    private ApplicationContext applicationContext;
+
+    @ExtApiToken
     @PostMapping(value = "testToken")
     public String testToken(@RequestBody TestReqVO reqVO) {
         testService.testToken(reqVO);
-        return "依旧解决中文乱码";
+//        String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
+//        for (String beanDefinitionName : beanDefinitionNames) {
+//            System.out.println(beanDefinitionName);
+//        }
+        return "中文应该没问题吧没问题吧";
     }
 }

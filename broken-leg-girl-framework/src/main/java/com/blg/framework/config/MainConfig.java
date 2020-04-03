@@ -19,8 +19,8 @@ import javax.persistence.EntityManagerFactory;
 //配置了扫描hibernate实体和repository的路径
 @EnableJpaRepositories(basePackages = "${"+ Constants.APP_BASE_PACKAGE+"}.**.dao")
 @EntityScan("${"+ Constants.APP_BASE_PACKAGE+"}.**.model")
-//配置扫描组件的路径
-@ComponentScan(basePackages = "${"+ Constants.APP_BASE_PACKAGE+"}")
+//配置扫描组件的路径，这里配置了多个路径
+@ComponentScan(basePackages = {"${"+ Constants.APP_BASE_PACKAGE+"}.**,com.blg.api.**"})
 public class MainConfig {
 
     @Bean

@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.web.PageableHandlerMethodArgumentResolver;
 import org.springframework.http.MediaType;
 import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.web.context.request.RequestContextListener;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
@@ -15,6 +16,8 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -60,6 +63,10 @@ public class WebConfig implements WebMvcConfigurer {
         return new FastJsonHttpMessageConverter();
     }
 
+    public HttpMessageConverter<String> stringConverter() {
+        return new StringHttpMessageConverter(StandardCharsets.UTF_8);
+    }
+
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
         //创建fastJson消息转换器
@@ -82,6 +89,7 @@ public class WebConfig implements WebMvcConfigurer {
         supportedMediaTypes.add(MediaType.TEXT_PLAIN);
         supportedMediaTypes.add(MediaType.TEXT_XML);
         fastConverter.setSupportedMediaTypes(supportedMediaTypes);
+        converters.add(stringConverter());
         converters.add(fastConverter);
     }
     //---------------------中文乱码解决---------------------

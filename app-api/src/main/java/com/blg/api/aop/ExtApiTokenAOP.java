@@ -34,7 +34,6 @@ public class ExtApiTokenAOP {
 
     @Around("pointCut()")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
-        System.out.println("进入了方法");
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         ExtApiToken extApiToken = signature.getMethod().getDeclaredAnnotation(ExtApiToken.class);
         if (extApiToken != null) { //如果添加注解则需要判断是否重复提交
