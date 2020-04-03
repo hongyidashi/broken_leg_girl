@@ -20,7 +20,7 @@ import javax.persistence.EntityManagerFactory;
 @EnableJpaRepositories(basePackages = "${"+ Constants.APP_BASE_PACKAGE+"}.**.dao")
 @EntityScan("${"+ Constants.APP_BASE_PACKAGE+"}.**.model")
 //配置扫描组件的路径，这里配置了多个路径
-@ComponentScan(basePackages = {"${"+ Constants.APP_BASE_PACKAGE+"}.**,com.blg.api.**"})
+@ComponentScan(basePackages = {"${"+ Constants.APP_BASE_PACKAGE+"},com.blg.api.**"})
 public class MainConfig {
 
     @Bean
