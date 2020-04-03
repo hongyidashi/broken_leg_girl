@@ -8,7 +8,7 @@
 
 #### 开发进度
   &emsp;&emsp; **2020/4/1 整合 springdata-jpa-hibernate**  
-  &emsp;&emsp; **2020/4/2 整合 Redis** 
+  &emsp;&emsp; **2020/4/2 整合 Redis**  
   &emsp;&emsp; **2020/4/3 使用转换器解决中文乱码和POST请求不支持问题** 
 
   &emsp;&emsp; **2020/4/2 整合 mybaits ——失败，取消整合** 
