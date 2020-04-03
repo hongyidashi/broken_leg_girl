@@ -21,3 +21,14 @@ spring:
     port: 30130
     pool:
       database: 0
+  application:
+    name: blg-demo
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+management:   # 暴露检测节点
+  endpoints:
+    web:
+      exposure:
+        include: "*"

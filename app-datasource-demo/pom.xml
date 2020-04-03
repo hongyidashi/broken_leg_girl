@@ -17,10 +17,10 @@
             <artifactId>broken-leg-girl-framework</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-        <!--  SpringCloud alibaba nacos    -->
-        <!--        <dependency>-->
-        <!--            <groupId>com.alibaba.cloud</groupId>-->
-        <!--            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>-->
-        <!--        </dependency>-->
+        <dependency>
+            <groupId>com.blg</groupId>
+            <artifactId>app-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 </project>

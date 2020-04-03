@@ -13,6 +13,7 @@
         <module>blg-demo</module>
         <module>app-datasource-demo</module>
         <module>app-api</module>
+        <module>blg-demo2</module>
     </modules>
 
     <properties>
