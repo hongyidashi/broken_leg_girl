@@ -1,0 +1,14 @@
+server:
+  port: 10086
+
+spring:
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      config:
+        server-addr: localhost:8848
+        file-extension: yaml
+        prefix: public-config
+  application:
+    name: blg-demo

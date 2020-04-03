@@ -1,34 +1,3 @@
-server:
-  port: 10086
-
 spring:
-  datasource:
-    url: jdbc:mysql://localhost:3306/hibernate_demo?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&characterEncoding=utf8&useFastDateParsing=false&pinGlobalTxToPhysicalConnection=true&serverTimezone=Hongkong
-    username: root
-    password: 123999
-    driver-class-name: com.mysql.jdbc.Driver
-  jpa:
-    database: mysql
-    show-sql: true
-    hibernate:
-      ddl-auto: update
-      naming:
-        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
-    properties:
-      hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
-  redis:
-    host: localhost
-    port: 30130
-    pool:
-      database: 0
-  application:
-    name: blg-demo
-  cloud:
-    nacos:
-      discovery:
-        server-addr: localhost:8848
-management:   # 暴露检测节点
-  endpoints:
-    web:
-      exposure:
-        include: "*"
+  profiles:
+    active: dev
