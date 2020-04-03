@@ -26,7 +26,7 @@ public class TestController {
         return Webs.getRequest().getRequestURI() + "------" + Webs.getRequest().getMethod() + "中文乱码咋办啊";
     }
 
-    @PostMapping(value = "testToken", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "testToken")
     public String testToken(@RequestBody TestReqVO reqVO) {
         testService.testToken(reqVO);
         return "依旧解决中文乱码";

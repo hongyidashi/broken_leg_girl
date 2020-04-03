@@ -15,6 +15,6 @@ public class TestService {
 
     public void testToken(TestReqVO reqVO) {
         String token = reqVO.getToken();
-        System.out.println(token);
+        System.out.println("拿到的token："+token);
     }
 }
