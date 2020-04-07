@@ -19,7 +19,10 @@
    - **添加基于Redis分布式锁 + token防重复提交**  
    - **整合nacos配置中心和服务注册发现功能**  
    - **整合链路追踪Sleuth与Zipkin**  
-
+   
+  &emsp;&emsp;2020/4/7
+  - **整合rabbitMQ**  
+  
 #### 安装教程
   1. `broken-leg-girl`目录执行maven命令`clean install -N`安装父项目（只有在父项目发生改变时才需要重新安装）；
   2. `broken-leg-girl-framework`目录执行maven命令`clean install`安装框架（只有在框架发生改变时才需要重新安装）；
