@@ -1,16 +1,19 @@
 package com.blg.blgdemo.controller;
 
 import com.blg.api.annotation.ExtApiToken;
+import com.blg.blgdemo.mq.TopicSender;
 import com.blg.blgdemo.service.TestService;
 import com.blg.blgdemo.vo.reqvo.TestReqVO;
 import com.blg.framework.utils.Webs;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import javax.annotation.Resource;
 
 /**
  * @Auther: panhongtong
@@ -40,5 +43,16 @@ public class TestController {
 //            System.out.println(beanDefinitionName);
 //        }
         return "中文应该没问题吧没问题吧";
+    }
+
+    @GetMapping("testMQT")
+    public String testMQT() {
+        return testService.testMQT();
+    }
+
+
+    @GetMapping("testMq")
+    public String myTestMq() {
+        return testService.myTestMq();
     }
 }

@@ -35,4 +35,9 @@ public class TestController {
     public String testr() {
         return testService.testRedis();
     }
+
+    @GetMapping(value = "testMQ")
+    public String testMQ() {
+        return testService.testMyMq();
+    }
 }

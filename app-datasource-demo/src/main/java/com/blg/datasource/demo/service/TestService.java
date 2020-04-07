@@ -46,4 +46,11 @@ public class TestService {
         return redisTemplate.opsForValue().get("testR").toString();
     }
 
+    public void testMQT(String name) {
+        $Girl girl = new $Girl();
+        girl.setName(name);
+        girl.setAge(9);
+        entityManager.persist(girl);
+        System.out.println("OK");
+    }
 }

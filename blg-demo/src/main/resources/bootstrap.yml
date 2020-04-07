@@ -12,3 +12,9 @@ spring:
         prefix: public-config
   application:
     name: blg-demo
+  rabbitmq:
+    host: localhost
+    port: 30120
+    username: guest
+    password: guest
+    virtual-host: demo-virtual
