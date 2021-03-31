@@ -144,7 +144,7 @@
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>28.1-jre</version>
+                <version>29.0-jre</version>
             </dependency>
             <!-- 公共库结束 -->
             <!-- 日志支持开始 -->
